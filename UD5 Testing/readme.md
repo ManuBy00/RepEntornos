@@ -1,5 +1,16 @@
 # Unidad 5 PRUEBAS
 
+### 1. Introducción
+
+Una prueba o test es una ejecución controlada de nuestro software que se lleva a cabo en unas condiciones concretas y para la que se comprueba que el resultado de la ejecución coincide con el esperado.
+
+Una buena prueba debe tener dos objetivos:
+
+* Comprobar **si el software no hace lo que debe hacer**.
+* Comprobar **si el software hace algo que no debe hacer**.
+
+En este tema vamos a profundizar en los tipos de pruebas existentes y su funcionamiento, para posteriormente poner en práctica lo aprendido con un pequeño proyecto.
+
 ### 2. Pruebas
 
 **2.1. Forma de las pruebas**
@@ -81,9 +92,30 @@ En los métodos de la clase test utilizamos aserciones para indicar afirmaciones
 
 ![alt text](assets/image-2.png)
 
-**PUESTA EN PRÁCTICA**
 
-Vamos a poner en práctica lo aprendido con el proyecto Pila. A continuación se muestran los test que vamos a llevar a cabo, y el modelo que se ha creado para cumplir con los tests.
+### 4. TDD
+
+**TDD** (**Test Driven Design**) es una metodología de desarrollo que pone a las pruebas en el centro del desarrollo de software, proponiendo que primero se diseñen estas y luego se programe, no con el fin de desarrollar una funcionalidad concreta, sino con el de conseguir que el software pase el test.
+
+De esta manera, aunque el desarrollo en un principio se ralentice, se consigue un software robusto con una cobertura de código del 100% que tendrá un coste de mantenimiento menor. Además, al refactorizar constantemente, el código será de mayor calidad.
+
+Este método se resume en los siguientes pasos:
+
+* Escoge el requisito sin implementar más sencillo y escribe un test que compruebe si este se cumple (fase roja). Evidentemente este test fallará.
+* Implementa el código que haga que el programa pase el test (fase verde).
+* Refactoriza el código (fase azul):
+
+  * Busca malos olores (*code smells*) y elimínalos.
+  * Busca duplicidades y elimínalas.
+  * Comprueba que el código cumpla con los principios SOLID.
+  * Trata de hacer el código más claro y mantenible.
+* Ejecuta los tests para comprobar que la refactorización no ha introducido algún bug.
+* Vuelve al punto 1 mientras queden requisitos sin cumplir.
+
+
+### 5. PUESTA EN PRÁCTICA
+
+Vamos a poner en práctica lo aprendido con el proyecto Pila. A continuación se muestran los test que vamos a llevar a cabo, y el modelo que he creado para cumplir con los tests necesarios. El proycto está incluído en el repositorio.
 
 TESTS:
 
